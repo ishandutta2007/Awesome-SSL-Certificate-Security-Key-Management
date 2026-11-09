@@ -132,9 +132,9 @@ Self-hosted, community-driven SSL/TLS Certificate and Key Management tools. Open
 
 ### ⭐ Popular Open-Source Solutions (by Stars)
 
-Sorted descending by GitHub stars:
+Sorted descending by GitHub_Stars:
 
-| 📦 Repository | ⭐ GitHub Stars Badge | 💻 Tech Stack | 📜 License | 🏷️ Category | 🎯 Primary Focus |
+| 📦 Repository | ⭐ GitHub_Stars_Badge | 💻 Tech Stack | 📜 License | 🏷️ Category | 🎯 Primary Focus |
 |:---|:---|:---|:---|:---|:---|
 | **[FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)** 🛠️ | [![Stars](https://img.shields.io/github/stars/FiloSottile/mkcert?style=social&color=white)](https://github.com/FiloSottile/mkcert/stargazers) | Go | BSD-3-Clause | Dev PKI | Zero-config local CA with automatic system/browser trust store installation |
 | **[acmesh-official/acme.sh](https://github.com/acmesh-official/acme.sh)** 🐚 | [![Stars](https://img.shields.io/github/stars/acmesh-official/acme.sh?style=social&color=white)](https://github.com/acmesh-official/acme.sh/stargazers) | Shell (POSIX) | GPL-3.0 | ACME Client | Dependency-free, pure POSIX shell ACME client supporting DNS-01 API automation |
