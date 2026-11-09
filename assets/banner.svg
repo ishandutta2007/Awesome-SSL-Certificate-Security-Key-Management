@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <!-- Neon Glow Accents -->
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="cipher-flow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="slight-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" />
+
+  <!-- Subtle Cyber Tech Grid Pattern -->
+  <g opacity="0.12">
+    <path d="M 0,60 L 1200,60 M 0,120 L 1200,120 M 0,180 L 1200,180 M 0,240 L 1200,240 M 0,300 L 1200,300" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,8" />
+    <path d="M 120,0 L 120,360 M 240,0 L 240,360 M 360,0 L 360,360 M 480,0 L 480,360 M 600,0 L 600,360 M 720,0 L 720,360 M 840,0 L 840,360 M 960,0 L 960,360 M 1080,0 L 1080,360" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,8" />
+  </g>
+
+  <!-- Ambient Pulsing Glow Orbs (Dynamic in Background) -->
+  <g opacity="0.45">
+    <circle cx="180" cy="180" r="140" fill="#0ea5e9" filter="url(#glow)">
+      <animate attributeName="r" values="120;150;120" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.25;0.5;0.25" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1020" cy="180" r="150" fill="#8b5cf6" filter="url(#glow)">
+      <animate attributeName="r" values="130;160;130" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.45;0.2" dur="9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Dynamic Security Circuit & Connection Lines (Behind Text) -->
+  <g stroke="url(#primary-glow)" stroke-width="2" fill="none" opacity="0.4">
+    <path d="M 50,80 Q 250,20 400,90 T 750,70 T 1150,110">
+      <animate attributeName="stroke-dasharray" values="10,20;40,10;10,20" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M 50,280 Q 280,340 500,280 T 880,300 T 1150,260">
+      <animate attributeName="stroke-dasharray" values="15,15;30,20;15,15" dur="10s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Left Side Dynamic Graphic: Shield & Cryptographic Key (Lock / Shield) -->
+  <g transform="translate(100, 100)" filter="url(#glow)">
+    <!-- Outer Floating Shield -->
+    <path d="M 50,10 Q 90,10 90,50 Q 90,100 50,130 Q 10,100 10,50 Q 10,10 50,10 Z" fill="none" stroke="#38bdf8" stroke-width="3.5" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4s" repeatCount="indefinite" />
+    </path>
+    <!-- Keyhole / Core Lock -->
+    <circle cx="50" cy="55" r="14" fill="#38bdf8" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <path d="M 45,62 L 55,62 L 58,82 L 42,82 Z" fill="#38bdf8" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4s" repeatCount="indefinite" />
+    </path>
+    <!-- Orbiting Security Node -->
+    <circle cx="50" cy="50" r="4" fill="#a855f7">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 65" to="360 50 65" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Right Side Dynamic Graphic: PKI Certificate Hierarchy & Rotation Ring -->
+  <g transform="translate(1000, 105)" filter="url(#glow)">
+    <!-- Rotating Certificate Certificate Agility Ring -->
+    <circle cx="50" cy="55" r="48" fill="none" stroke="#818cf8" stroke-width="2.5" stroke-dasharray="16,8" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="0 50 55" to="360 50 55" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="50" cy="55" r="32" fill="none" stroke="#c084fc" stroke-width="2" stroke-dasharray="8,6" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="360 50 55" to="0 50 55" dur="14s" repeatCount="indefinite" />
+    </circle>
+    <!-- Digital Certificate Icon in Center -->
+    <rect x="34" y="38" width="32" height="36" rx="4" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2" />
+    <line x1="40" y1="47" x2="56" y2="47" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+    <line x1="40" y1="54" x2="60" y2="54" stroke="#a855f7" stroke-width="2" stroke-linecap="round" />
+    <line x1="40" y1="61" x2="52" y2="61" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- FOREGROUND: Clean, Sharp, Unobstructed Title & Badges -->
+  <g id="foreground-content" filter="url(#slight-shadow)">
+    <!-- Top Category Tag -->
+    <g transform="translate(390, 48)">
+      <rect x="0" y="0" width="420" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.9" />
+      <text x="210" y="20" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">
+        ENTERPRISE CLM • PRIVATE PKI • ACME • SECRETS
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="142" text-anchor="middle" font-size="40" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Awesome SSL &amp; Key Management
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="184" text-anchor="middle" font-size="16.5" font-weight="400" fill="#94a3b8" letter-spacing="0.2">
+      Curated directory of Certificate Lifecycle Management, PKI architectures &amp; Machine Identity tools
+    </text>
+
+    <!-- Feature Pills / Badges (In clear foreground, non-occluding) -->
+    <g transform="translate(235, 222)">
+      <!-- Pill 1: ACME v2 Automation -->
+      <g transform="translate(0, 0)">
+        <rect width="160" height="38" rx="8" fill="#111c33" stroke="#0ea5e9" stroke-width="1.2" />
+        <text x="80" y="24" fill="#38bdf8" font-size="13" font-weight="600" text-anchor="middle">⚡ ACME v2 Ready</text>
+      </g>
+      <!-- Pill 2: Zero-Trust PKI -->
+      <g transform="translate(180, 0)">
+        <rect width="170" height="38" rx="8" fill="#181533" stroke="#8b5cf6" stroke-width="1.2" />
+        <text x="85" y="24" fill="#c084fc" font-size="13" font-weight="600" text-anchor="middle">🔒 Zero-Trust PKI</text>
+      </g>
+      <!-- Pill 3: Post-Quantum Agility -->
+      <g transform="translate(370, 0)">
+        <rect width="180" height="38" rx="8" fill="#1b1d36" stroke="#6366f1" stroke-width="1.2" />
+        <text x="90" y="24" fill="#a5b4fc" font-size="13" font-weight="600" text-anchor="middle">⚛️ Post-Quantum Agility</text>
+      </g>
+      <!-- Pill 4: 47-Day Lifespans -->
+      <g transform="translate(570, 0)">
+        <rect width="160" height="38" rx="8" fill="#14232d" stroke="#10b981" stroke-width="1.2" />
+        <text x="80" y="24" fill="#34d399" font-size="13" font-weight="600" text-anchor="middle">⏳ 47-Day Renewal</text>
+      </g>
+    </g>
+
+    <!-- Bottom Indicator -->
+    <text x="600" y="306" text-anchor="middle" font-size="13" font-weight="500" fill="#64748b" letter-spacing="1.5">
+      SaaS SOLUTIONS • OPEN SOURCE CONTROLLERS • SECURITY BEST PRACTICES
+    </text>
+  </g>
+</svg>
